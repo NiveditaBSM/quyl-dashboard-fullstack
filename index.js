@@ -13,6 +13,7 @@ app.use(
         directives: {
             defaultSrc: ["'self'"],
             scriptSrc: ["'self'"], // Add more sources as needed
+            connectSrc: ["'self'", "http://localhost:5000"], // Allow API requests to the same origin
         },
     })
 );
