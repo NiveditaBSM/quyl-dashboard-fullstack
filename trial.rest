@@ -1,0 +1,11 @@
+POST http://localhost:5000/api/students
+Content-Type: application/json
+
+{
+    "name": "Aryan Mehtani",
+    "cohort": "AY 2025-26",
+    "courses": [
+        { "name": "CBSE 9 History", "icon_path": "default.png" }
+    ],
+    "date_joined": "2024-12-24"
+}
