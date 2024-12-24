@@ -1,11 +1,21 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+
 const studentRouter = require('./routes/studentRouter');
 
 const app = express();
 
 app.use(cors())
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'"], // Add more sources as needed
+        },
+    })
+);
 app.use(express.static('dist'))
 app.use(express.json());
 
