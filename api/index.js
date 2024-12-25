@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 
-const studentRouter = require('../../routes/studentRouter');
+const studentRouter = require('../routes/studentRouter');
 
 const app = express();
 
